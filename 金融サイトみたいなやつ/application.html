@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>application</title>
+
+
+<style>
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-top-color: ;
+    border-right-color: ;
+    border-bottom-color: ;
+    border-left-color: ;
+}
+.fraud-table {
+    border: 1px #C8C8C8 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+    -webkit-border-horizontal-spacing: ;
+    -webkit-border-vertical-spacing: ;
+}
+.frame {
+    background: #000000;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(0, 0, 0);
+    font-size: 10pt;
+    color: #FFFFFF;
+    line-height: 150%;
+    margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.timer{
+background-color:#ffff00;
+font-size: 70pt;
+color: #00ffff;
+}
+
+
+</style>
+</head>
+
+<body>
+<a href="index.html" class="cta-button"><img src="gazou/youareanidiot.gif"></a>
+
+<div class="timer">残り時間: <span id="countdown"></span></div>
+
+<script>
+    
+    const targetDate = new Date('2023-12-31T23:59:59').getTime();
+
+   
+    function updateTimer() {
+        const currentDate = new Date().getTime();
+        const timeRemaining = targetDate - currentDate;
+
+        
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        
+        document.getElementById('countdown').innerHTML = `${hours}時間 ${minutes}分 ${seconds}秒`;
+
+        
+        if (timeRemaining <= 0) {
+            document.getElementById('countdown').innerHTML = "期限切れ";
+        }
+    }
+
+    
+    setInterval(updateTimer, 1000);
+</script>
+
+
+
+<div class="frame">
+
+<p>ワンクリック詐欺サイトをご利用頂き、まことにありがとうございました。お客様の個人情報を取得させて頂き、以下の通り登録が正式に完了いたしました。<br><b>登録料45,000円を、至急下記口座までお振込み下さいます様、お願い致します</b>。<br>尚、時間が経ってもお振込みが行われない場合、下記プロバイダへ問い合わせ、お客様の<b>ご自宅、もしくはお勤め先へご請求</b>をさせて頂く場合もございます。予めご了承下さいませ。</p>
+
+
+<table class="fraud-table">
+<caption>あなたのアクセス情報</caption>
+<tr>
+	<td class="item-name">ご登録日</span></td>
+	<td>Xxxxday, xx-Xxx-20xx xx:xx:xx JST</td>
+</tr>
+<tr>
+	<td class="item-name">あなたのIPアドレス</td>
+	<td>xxx.xx.xxx.xxx</td>
+</tr>
+<tr>
+	<td class="item-name">あなたのリモートホスト</td>
+	<td>(none)</td>
+</tr>
+<tr>
+	<td class="item-name">あなたのアクセス経路</td>
+	<td>https://www.google.com/</td>
+</tr>
+<tr>
+	<td class="item-name">現在ご利用のブラウザ</td>
+	<td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</td>
+</tr>
+<tr>
+	<td class="item-name">アクセスサーバ</td>
+	<td>xxxx.com</td>
+</tr>
+<tr>
+	<td class="item-name">サーバソフトウェア</td>
+	<td>Xxxxx</td>
+</tr>
+<tr>
+	<td class="item-name">リモートポート</td>
+	<td>xxxxx</td>
+</tr>
+<tr>
+	<td class="item-name">CHARSET</td>
+	<td>(none)</td>
+</tr>
+<tr>
+	<td class="item-name">Accept Language</td>
+	<td>ja,en-US;q=0.9,en;q=0.8</td>
+</tr>
+<tr>
+	<td class="item-name">http connection</td>
+	<td>(none)</td>
+</tr>
+<tr>
+	<td class="item-name">Document root</td>
+	<td>/home/users/2/kentaro/web/kentaro-shimizu</td>
+</tr>
+<tr>
+	<td class="item-name">http accept</td>
+	<td>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</td>
+</tr>
+</table>
+
+
+<table class="fraud-table">
+<caption>お振込先</caption>
+<tr>
+	<td class="item-name">銀行名</td>
+	<td>地方銀行</td>
+</tr>
+<tr>
+	<td class="item-name">支店名</td>
+	<td>詐欺支店</td>
+</tr>
+<tr>
+	<td class="item-name">口座名義</td>
+	<td>you are an idiot</td>
+</tr>
+<tr>
+	<td class="item-name">口座番号</td>
+	<td>普）xxxxxx</td>
+</tr>
+<tr>
+	<td class="item-name">振込金額</td>
+	<td>45,000円</td>
+</tr>
+</table>
+
+<p>※お支払い手数料に関しましては、お客様のご負担となります</p>
+
+
+</div>
+</body>
+</html>
+
+</body>
+
+</html>
